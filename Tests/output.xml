@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-14T13:20:10.124287" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Lenovo\PycharmProjects\Assessment\Tests">
+<suite id="s1-s1" name="GetdetailsfromFrames" source="C:\Users\Lenovo\PycharmProjects\Assessment\Tests\GetdetailsfromFrames.robot">
+<test id="s1-s1-t1" name="Get details from both the frames" line="11">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:10.322559" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:20:10.322559" elapsed="1.592831"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:20:11.915390" elapsed="0.028862"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:11.944252" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:20:11.944252" elapsed="26.405996"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:10.322559" elapsed="28.027689"/>
+</kw>
+<kw name="Click on AlertFrameandWindow box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:38.351267" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.351267" elapsed="0.008009"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:38.360726" level="INFO">Clicking element 'xpath://h5[normalize-space()='Alerts, Frame &amp; Windows']'.</msg>
+<arg>${Alertframe&amp;windowbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.360726" elapsed="0.099507"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:38.351267" elapsed="0.108966"/>
+</kw>
+<kw name="Click on frames botton" owner="FramesPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:38.462086" level="INFO">Clicking element 'xpath://span[text()='Frames']'.</msg>
+<arg>${framebox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.461382" elapsed="0.068991"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:38.461382" elapsed="0.068991"/>
+</kw>
+<kw name="Select first frame and get text" owner="FramesPage">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:38.531889" level="INFO">Selecting frame 'frame1'.</msg>
+<arg>frame1</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.531889" elapsed="0.266269"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:38.826581" level="INFO">${actualframe1text} = This is a sample page</msg>
+<var>${actualframe1text}</var>
+<arg>${textInframe}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.798158" elapsed="0.028423"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:20:38.826581" level="INFO">This is a sample page</msg>
+<arg>${actualframe1text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.826581" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actualframe1text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.827834" elapsed="0.000000"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.827834" elapsed="0.003609"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:38.531889" elapsed="0.299554"/>
+</kw>
+<kw name="Select second frame and get text" owner="FramesPage">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:38.831949" level="INFO">Selecting frame 'frame2'.</msg>
+<arg>frame2</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.831949" elapsed="0.166314"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:39.019890" level="INFO">${actualframe2text} = This is a sample page</msg>
+<var>${actualframe2text}</var>
+<arg>${textInframe}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:20:38.998263" elapsed="0.021627"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actualframe2text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:20:39.019890" elapsed="0.000504"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:20:39.020394" level="INFO">This is a sample page</msg>
+<arg>${actualframe2text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:20:39.020394" elapsed="0.000000"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-07-14T13:20:39.020394" elapsed="0.002187"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:38.831949" elapsed="0.191147"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:20:39.023096" elapsed="2.192051"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:39.023096" elapsed="2.192051"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:10.322559" elapsed="30.892588"/>
+</test>
+<doc>to get text from the both frames</doc>
+<status status="PASS" start="2024-07-14T13:20:10.155711" elapsed="31.059436"/>
+</suite>
+<suite id="s1-s2" name="GetTextFromNewTab" source="C:\Users\Lenovo\PycharmProjects\Assessment\Tests\GetTextFromNewTab.robot">
+<test id="s1-s2-t1" name="Get the text from the New tab and log it on console" line="9">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:41.262072" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:20:41.246419" elapsed="1.489387"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:20:42.736019" elapsed="0.041781"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:20:42.778805" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:20:42.778805" elapsed="28.550687"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:41.246419" elapsed="30.084096"/>
+</kw>
+<kw name="Click on AlertFrameandWindow box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:11.331025" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:21:11.331025" elapsed="0.008932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:11.339957" level="INFO">Clicking element 'xpath://h5[normalize-space()='Alerts, Frame &amp; Windows']'.</msg>
+<arg>${Alertframe&amp;windowbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:21:11.339957" elapsed="0.107581"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:21:11.331025" elapsed="0.117507"/>
+</kw>
+<kw name="Click on browse window element" owner="BrowseWindow">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:11.448532" level="INFO">Clicking element 'xpath://li/span[text()='Browser Windows']'.</msg>
+<arg>${browseWindowbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:21:11.448532" elapsed="0.070909"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:11.519441" level="INFO">Clicking button 'tabButton'.</msg>
+<arg>tabButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:21:11.519441" elapsed="0.104970"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-14T13:21:14.625958" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-14T13:21:11.624411" elapsed="3.001547"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:21:11.448532" elapsed="3.177426"/>
+</kw>
+<kw name="Switch to new window and get text from new window" owner="BrowseWindow">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:21:14.627522" elapsed="0.031641"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:14.710402" level="INFO">${newWindowText} = This is a sample page</msg>
+<var>${newWindowText}</var>
+<arg>${headingText}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:21:14.660165" elapsed="0.050237"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${newWindowText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:21:14.710402" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:21:14.711410" level="INFO">This is a sample page</msg>
+<arg>${newWindowText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:21:14.711410" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:21:14.711410" elapsed="0.015599"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:21:14.627522" elapsed="0.100491"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:21:14.728013" elapsed="2.209338"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:21:14.728013" elapsed="2.209338"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:20:41.246419" elapsed="35.690932"/>
+</test>
+<doc>get text from the new tab</doc>
+<status status="PASS" start="2024-07-14T13:20:41.215147" elapsed="35.722204"/>
+</suite>
+<suite id="s1-s3" name="GetTextinAlertPopup" source="C:\Users\Lenovo\PycharmProjects\Assessment\Tests\GetTextinAlertPopup.robot">
+<test id="s1-s3-t1" name="Get the text From alert Popup" line="10">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:16.953395" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:21:16.953395" elapsed="1.498236"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:21:18.451631" elapsed="0.031709"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:21:18.483340" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:21:18.483340" elapsed="57.531146"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:21:16.953395" elapsed="59.061091"/>
+</kw>
+<kw name="Click on AlertFrameandWindow box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:16.014486" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.014486" elapsed="0.012020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:16.026506" level="INFO">Clicking element 'xpath://h5[normalize-space()='Alerts, Frame &amp; Windows']'.</msg>
+<arg>${Alertframe&amp;windowbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.026506" elapsed="0.104054"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:16.014486" elapsed="0.116074"/>
+</kw>
+<kw name="Click on alert" owner="AlertPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:16.131408" level="INFO">Clicking element 'xpath://li/span[text()='Alerts']'.</msg>
+<arg>${Alertbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.131408" elapsed="0.059055"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:16.131408" elapsed="0.059055"/>
+</kw>
+<kw name="Click on click me button and log the message" owner="AlertPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:16.191851" level="INFO">Clicking button 'confirmButton'.</msg>
+<arg>confirmButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.190822" elapsed="0.076579"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:16.267401" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.267401" elapsed="0.004076"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:16.299534" level="INFO">${result} = You selected Ok</msg>
+<var>${result}</var>
+<arg>confirmResult</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.271477" elapsed="0.028057"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:16.300644" level="INFO">You selected Ok</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.299534" elapsed="0.001110"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.300644" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:16.190822" elapsed="0.109822"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:22:16.302066" elapsed="2.208683"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:16.302066" elapsed="2.208683"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:21:16.953395" elapsed="61.557354"/>
+</test>
+<doc>get text after accepting alert popup</doc>
+<status status="PASS" start="2024-07-14T13:21:16.940365" elapsed="61.574419"/>
+</suite>
+<suite id="s1-s4" name="ListOfItemsUnderElements" source="C:\Users\Lenovo\PycharmProjects\Assessment\Tests\ListOfItemsUnderElements.robot">
+<test id="s1-s4-t1" name="Get List of Item under Elements" line="8">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:18.527953" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:22:18.527953" elapsed="1.496624"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:22:20.024577" elapsed="0.028487"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:20.053064" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:22:20.053064" elapsed="35.156644"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:18.527953" elapsed="36.683441"/>
+</kw>
+<kw name="Click on Elements box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:55.212733" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.212733" elapsed="0.011383"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:55.225429" level="INFO">Clicking element 'xpath://h5[normalize-space()='Elements']'.</msg>
+<arg>${elementsbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.225429" elapsed="0.112544"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:55.211394" elapsed="0.126922"/>
+</kw>
+<kw name="Store all the values under elements box" owner="LandingPage">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:55.353022" level="INFO">${ListunderElements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.21")&gt;, &lt;selenium.webdriv...</msg>
+<var>${ListunderElements}</var>
+<arg>${menuofalllist}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.339603" elapsed="0.013419"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.353022" level="INFO">${ListunderElements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.21")&gt;, &lt;selenium.webdriv...</msg>
+<arg>${ListunderElements}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.353022" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:55.338316" elapsed="0.014706"/>
+</kw>
+<kw name="Show all the value on logs and console" owner="LandingPage">
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.353022" elapsed="0.017286"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.379678" level="INFO">Text Box</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.370308" elapsed="0.009370"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.21")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.353022" elapsed="0.026656"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.379678" elapsed="0.013232"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.404776" level="INFO">Check Box</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.392910" elapsed="0.011866"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.22")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.379678" elapsed="0.025098"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.404776" elapsed="0.012390"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.428826" level="INFO">Radio Button</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.417166" elapsed="0.011660"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.23")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.404776" elapsed="0.024050"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.429986" elapsed="0.006182"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.448498" level="INFO">Web Tables</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.441535" elapsed="0.006963"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.24")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.428826" elapsed="0.019672"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.448498" elapsed="0.020564"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.479588" level="INFO">Buttons</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.469062" elapsed="0.012701"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.25")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.448498" elapsed="0.033265"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.481763" elapsed="0.009072"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.503579" level="INFO">Links</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.490835" elapsed="0.012744"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.26")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.481763" elapsed="0.021816"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.504614" elapsed="0.009015"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.521372" level="INFO">Broken Links - Images</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.513629" elapsed="0.007743"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.27")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.503579" elapsed="0.017793"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.521372" elapsed="0.014684"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.548671" level="INFO">Upload and Download</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.536056" elapsed="0.012615"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.28")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.521372" elapsed="0.027299"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.548671" elapsed="0.010317"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-14T13:22:55.567889" level="INFO">Dynamic Properties</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.558988" elapsed="0.008901"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8667a8169e52555d58bf433590a60024", element="f.A8485907AE7AF4A6B57FC1C35925DFA7.d.3C09548A9D9C31ED13F1E1FC7A75EE11.e.29")&gt;</var>
+<status status="PASS" start="2024-07-14T13:22:55.548671" elapsed="0.019218"/>
+</iter>
+<var>${element}</var>
+<value>@{ListunderElements}</value>
+<status status="PASS" start="2024-07-14T13:22:55.353022" elapsed="0.214867"/>
+</for>
+<status status="PASS" start="2024-07-14T13:22:55.353022" elapsed="0.214867"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:22:55.567889" elapsed="2.204322"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:55.567889" elapsed="2.204322"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:18.527953" elapsed="39.244258"/>
+</test>
+<doc>get all the list of elements under element box</doc>
+<status status="PASS" start="2024-07-14T13:22:18.514784" elapsed="39.259162"/>
+</suite>
+<suite id="s1-s5" name="TextBoxFormSubmission" source="C:\Users\Lenovo\PycharmProjects\Assessment\Tests\TextBoxFormSubmission.robot">
+<test id="s1-s5-t1" name="fill the form with details DQ-TC001" line="10">
+<kw name="fill the complete form and validate with same data">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:22:58.609600" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:22:58.609600" elapsed="1.410632"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:23:00.021310" elapsed="0.043889"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:00.065199" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:23:00.065199" elapsed="8.311851"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:58.609092" elapsed="9.767958"/>
+</kw>
+<kw name="Click on Elements box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.378225" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.378225" elapsed="0.014248"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.392473" level="INFO">Clicking element 'xpath://h5[normalize-space()='Elements']'.</msg>
+<arg>${elementsbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.392473" elapsed="0.108098"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:08.378225" elapsed="0.122346"/>
+</kw>
+<kw name="select the text box option" owner="TextBoxPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.500571" level="INFO">Clicking element 'xpath://ul/li/span[text()='Text Box']'.</msg>
+<arg>${textboxelement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.500571" elapsed="0.067168"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:08.500571" elapsed="0.067168"/>
+</kw>
+<kw name="fill the details from external files and submit" owner="TextBoxPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.567739" level="INFO">Typing text 'Test1' into text field 'userName'.</msg>
+<arg>${fillusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.567739" elapsed="0.113138"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.680877" level="INFO">Typing text 'Test1@mailsac.com' into text field 'userEmail'.</msg>
+<arg>${fillemail}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.680877" elapsed="0.142280"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.823157" level="INFO">Typing text 'Current_Address1' into text field 'currentAddress'.</msg>
+<arg>${fillcurentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.823157" elapsed="0.108641"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:08.931798" level="INFO">Typing text 'Permanent _Address1' into text field 'permanentAddress'.</msg>
+<arg>${fillpermanantadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:08.931798" elapsed="0.123399"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.055197" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.055197" elapsed="0.005843"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.061632" level="INFO">Clicking button 'submit'.</msg>
+<arg>submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.061040" elapsed="0.091249"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.152289" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.152289" elapsed="0.000000"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:08.567739" elapsed="0.584550"/>
+</kw>
+<kw name="validate same data is filled or not" owner="TextBoxPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.184911" level="INFO">Element 'xpath://p[@id='name']' contains text 'Test1'.</msg>
+<arg>${validateusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.152289" elapsed="0.032622"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.199248" level="INFO">Element 'xpath://p[@id='email']' contains text 'Test1@mailsac.com'.</msg>
+<arg>${validateemail}</arg>
+<arg>${Email}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.184911" elapsed="0.014337"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.226744" level="INFO">Element 'xpath://p[@id='currentAddress']' contains text 'Current_Address1'.</msg>
+<arg>${validatecurrentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.206699" elapsed="0.020045"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:09.248416" level="INFO">Element 'xpath://p[@id='permanentAddress']' contains text 'Permanent _Address1'.</msg>
+<arg>${validatepermanentadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.227129" elapsed="0.021287"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:09.152289" elapsed="0.096127"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:23:09.248416" elapsed="2.201282"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:09.248416" elapsed="2.202304"/>
+</kw>
+<arg>Full_Name=Test1</arg>
+<arg>Email=Test1@mailsac.com</arg>
+<arg>Current_Address=Current_Address1</arg>
+<arg>Permanent_Address=Permanent _Address1</arg>
+<status status="PASS" start="2024-07-14T13:22:58.607952" elapsed="12.842768"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:22:58.598433" elapsed="12.853377"/>
+</test>
+<test id="s1-s5-t2" name="fill the form with details DQ-TC002" line="10">
+<kw name="fill the complete form and validate with same data">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:11.451810" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:23:11.451810" elapsed="1.501037"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:23:12.952847" elapsed="0.049033"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:13.002919" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:23:13.001880" elapsed="9.935948"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:11.451810" elapsed="11.486018"/>
+</kw>
+<kw name="Click on Elements box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:22.938852" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:22.937828" elapsed="0.007322"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:22.945150" level="INFO">Clicking element 'xpath://h5[normalize-space()='Elements']'.</msg>
+<arg>${elementsbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:22.945150" elapsed="0.114233"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:22.937828" elapsed="0.121555"/>
+</kw>
+<kw name="select the text box option" owner="TextBoxPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.061289" level="INFO">Clicking element 'xpath://ul/li/span[text()='Text Box']'.</msg>
+<arg>${textboxelement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.061119" elapsed="0.066728"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:23.060609" elapsed="0.067238"/>
+</kw>
+<kw name="fill the details from external files and submit" owner="TextBoxPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.128860" level="INFO">Typing text 'Test1' into text field 'userName'.</msg>
+<arg>${fillusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.127847" elapsed="0.122425"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.253380" level="INFO">Typing text 'Test1@mailsac.com' into text field 'userEmail'.</msg>
+<arg>${fillemail}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.250272" elapsed="0.140426"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.390698" level="INFO">Typing text 'Current_Address2' into text field 'currentAddress'.</msg>
+<arg>${fillcurentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.390698" elapsed="0.111366"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.502064" level="INFO">Typing text 'Permanent _Address2' into text field 'permanentAddress'.</msg>
+<arg>${fillpermanantadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.502064" elapsed="0.112621"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.615189" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.615189" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.615189" level="INFO">Clicking button 'submit'.</msg>
+<arg>submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.615189" elapsed="0.060751"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.675940" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.675940" elapsed="0.006009"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:23.127847" elapsed="0.554102"/>
+</kw>
+<kw name="validate same data is filled or not" owner="TextBoxPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.706635" level="INFO">Element 'xpath://p[@id='name']' contains text 'Test1'.</msg>
+<arg>${validateusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.681949" elapsed="0.024686"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.763297" level="INFO">Element 'xpath://p[@id='email']' contains text 'Test1@mailsac.com'.</msg>
+<arg>${validateemail}</arg>
+<arg>${Email}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.706635" elapsed="0.056662"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.782547" level="INFO">Element 'xpath://p[@id='currentAddress']' contains text 'Current_Address2'.</msg>
+<arg>${validatecurrentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.763297" elapsed="0.019250"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:23.826390" level="INFO">Element 'xpath://p[@id='permanentAddress']' contains text 'Permanent _Address2'.</msg>
+<arg>${validatepermanentadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.782547" elapsed="0.043843"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:23.681949" elapsed="0.144441"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:23:23.826390" elapsed="2.210508"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:23.826390" elapsed="2.210508"/>
+</kw>
+<arg>Full_Name=Test1</arg>
+<arg>Email=Test1@mailsac.com</arg>
+<arg>Current_Address=Current_Address2</arg>
+<arg>Permanent_Address=Permanent _Address2</arg>
+<status status="PASS" start="2024-07-14T13:23:11.451810" elapsed="14.585088"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:11.451810" elapsed="14.585088"/>
+</test>
+<test id="s1-s5-t3" name="fill the form with details DQ-TC003" line="10">
+<kw name="fill the complete form and validate with same data">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:26.036898" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:23:26.036898" elapsed="1.466877"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:23:27.503775" elapsed="0.044767"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:27.549110" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:23:27.548542" elapsed="7.661064"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:26.036898" elapsed="9.172708"/>
+</kw>
+<kw name="Click on Elements box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.211683" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.211501" elapsed="0.009340"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.222142" level="INFO">Clicking element 'xpath://h5[normalize-space()='Elements']'.</msg>
+<arg>${elementsbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.222142" elapsed="0.105094"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:35.211014" elapsed="0.116563"/>
+</kw>
+<kw name="select the text box option" owner="TextBoxPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.328419" level="INFO">Clicking element 'xpath://ul/li/span[text()='Text Box']'.</msg>
+<arg>${textboxelement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.328419" elapsed="0.067694"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:35.327577" elapsed="0.068536"/>
+</kw>
+<kw name="fill the details from external files and submit" owner="TextBoxPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.397137" level="INFO">Typing text 'Test1' into text field 'userName'.</msg>
+<arg>${fillusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.397137" elapsed="0.113568"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.512576" level="INFO">Typing text 'Test1@mailsac.com' into text field 'userEmail'.</msg>
+<arg>${fillemail}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.512576" elapsed="0.194242"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.706818" level="INFO">Typing text 'Current_Address3' into text field 'currentAddress'.</msg>
+<arg>${fillcurentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.706818" elapsed="0.110863"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:35.818752" level="INFO">Typing text 'Permanent _Address3' into text field 'permanentAddress'.</msg>
+<arg>${fillpermanantadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:35.818752" elapsed="0.270117"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.088869" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.088869" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.088869" level="INFO">Clicking button 'submit'.</msg>
+<arg>submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.088869" elapsed="0.087309"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.176178" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.176178" elapsed="0.034344"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:35.396113" elapsed="0.814409"/>
+</kw>
+<kw name="validate same data is filled or not" owner="TextBoxPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.271726" level="INFO">Element 'xpath://p[@id='name']' contains text 'Test1'.</msg>
+<arg>${validateusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.211531" elapsed="0.060195"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.316175" level="INFO">Element 'xpath://p[@id='email']' contains text 'Test1@mailsac.com'.</msg>
+<arg>${validateemail}</arg>
+<arg>${Email}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.271726" elapsed="0.044449"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.355726" level="INFO">Element 'xpath://p[@id='currentAddress']' contains text 'Current_Address3'.</msg>
+<arg>${validatecurrentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.316175" elapsed="0.039551"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:36.409849" level="INFO">Element 'xpath://p[@id='permanentAddress']' contains text 'Permanent _Address3'.</msg>
+<arg>${validatepermanentadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.355726" elapsed="0.054123"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:36.210522" elapsed="0.199327"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:23:36.409849" elapsed="2.233555"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:36.409849" elapsed="2.233555"/>
+</kw>
+<arg>Full_Name=Test1</arg>
+<arg>Email=Test1@mailsac.com</arg>
+<arg>Current_Address=Current_Address3</arg>
+<arg>Permanent_Address=Permanent _Address3</arg>
+<status status="PASS" start="2024-07-14T13:23:26.036898" elapsed="12.606506"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:26.036898" elapsed="12.606506"/>
+</test>
+<test id="s1-s5-t4" name="fill the form with details DQ-TC004" line="10">
+<kw name="fill the complete form and validate with same data">
+<kw name="Open the broswer with landing page" owner="Generic">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:38.643404" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-14T13:23:38.643404" elapsed="1.498166"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-14T13:23:40.141570" elapsed="0.034372"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:40.175942" level="INFO">Opening url 'https://demoqa.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-14T13:23:40.175942" elapsed="10.150701"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:38.643404" elapsed="11.683239"/>
+</kw>
+<kw name="Click on Elements box" owner="LandingPage">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.328665" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.327654" elapsed="0.006919"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.334573" level="INFO">Clicking element 'xpath://h5[normalize-space()='Elements']'.</msg>
+<arg>${elementsbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.334573" elapsed="0.112068"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:50.327654" elapsed="0.120239"/>
+</kw>
+<kw name="select the text box option" owner="TextBoxPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.448673" level="INFO">Clicking element 'xpath://ul/li/span[text()='Text Box']'.</msg>
+<arg>${textboxelement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.448673" elapsed="0.068189"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:50.447893" elapsed="0.069979"/>
+</kw>
+<kw name="fill the details from external files and submit" owner="TextBoxPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.518216" level="INFO">Typing text 'Test1' into text field 'userName'.</msg>
+<arg>${fillusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.518216" elapsed="0.117529"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.635745" level="INFO">Typing text 'Test1@mailsac.com' into text field 'userEmail'.</msg>
+<arg>${fillemail}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.635745" elapsed="0.140095"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.777583" level="INFO">Typing text 'Current_Address4' into text field 'currentAddress'.</msg>
+<arg>${fillcurentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.775840" elapsed="0.111531"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:50.887371" level="INFO">Typing text 'Permanent _Address4' into text field 'permanentAddress'.</msg>
+<arg>${fillpermanantadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:50.887371" elapsed="0.128415"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.017794" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.015786" elapsed="0.004547"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.021503" level="INFO">Clicking button 'submit'.</msg>
+<arg>submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.021503" elapsed="0.056653"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.079696" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.079696" elapsed="0.022521"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:50.518216" elapsed="0.584001"/>
+</kw>
+<kw name="validate same data is filled or not" owner="TextBoxPage">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.133322" level="INFO">Element 'xpath://p[@id='name']' contains text 'Test1'.</msg>
+<arg>${validateusername}</arg>
+<arg>${Full_Name}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.102217" elapsed="0.031105"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.154414" level="INFO">Element 'xpath://p[@id='email']' contains text 'Test1@mailsac.com'.</msg>
+<arg>${validateemail}</arg>
+<arg>${Email}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.133322" elapsed="0.021092"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.175167" level="INFO">Element 'xpath://p[@id='currentAddress']' contains text 'Current_Address4'.</msg>
+<arg>${validatecurrentadd}</arg>
+<arg>${Current_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.154414" elapsed="0.027357"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-14T13:23:51.200893" level="INFO">Element 'xpath://p[@id='permanentAddress']' contains text 'Permanent _Address4'.</msg>
+<arg>${validatepermanentadd}</arg>
+<arg>${Permanent_Address}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.181771" elapsed="0.019122"/>
+</kw>
+<arg>${Full_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Current_Address}</arg>
+<arg>${Permanent_Address}</arg>
+<status status="PASS" start="2024-07-14T13:23:51.102217" elapsed="0.100776"/>
+</kw>
+<kw name="Close browser session" owner="Generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-14T13:23:51.202993" elapsed="2.196343"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:51.202993" elapsed="2.196343"/>
+</kw>
+<arg>Full_Name=Test1</arg>
+<arg>Email=Test1@mailsac.com</arg>
+<arg>Current_Address=Current_Address4</arg>
+<arg>Permanent_Address=Permanent _Address4</arg>
+<status status="PASS" start="2024-07-14T13:23:38.643404" elapsed="14.755932"/>
+</kw>
+<status status="PASS" start="2024-07-14T13:23:38.643404" elapsed="14.755932"/>
+</test>
+<doc>fill the form and check wheather same details is filled or not</doc>
+<status status="PASS" start="2024-07-14T13:22:57.773946" elapsed="55.625390"/>
+</suite>
+<status status="PASS" start="2024-07-14T13:20:10.124287" elapsed="223.275049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="GetdetailsfromFrames">Tests.GetdetailsfromFrames</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="GetTextFromNewTab">Tests.GetTextFromNewTab</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="GetTextinAlertPopup">Tests.GetTextinAlertPopup</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="ListOfItemsUnderElements">Tests.ListOfItemsUnderElements</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s5" name="TextBoxFormSubmission">Tests.TextBoxFormSubmission</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
